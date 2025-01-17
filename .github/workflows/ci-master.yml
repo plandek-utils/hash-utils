@@ -7,12 +7,16 @@ jobs:
   test_and_publish:
     runs-on: ubuntu-latest
     permissions:
+      attestations: write
+      checks: read
       contents: write
-      pull-requests: write
-      packages: write # allow GITHUB_TOKEN to publish packages
-      repository-projects: read
+      deployments: write
       id-token: write
       issues: write
+      packages: write # allow GITHUB_TOKEN to publish packages
+      pull-requests: write
+      repository-projects: write
+      statuses: write
 
     steps:
       - name: Checkout
@@ -50,7 +54,6 @@ jobs:
           release-type: node
           skip-github-release: false
           skip-github-pull-request: false
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build package
         run: npm run build
