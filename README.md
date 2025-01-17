@@ -42,15 +42,3 @@ const str = '{"age":30,"deep":{"a":4,"b":2},"name":"John"}';
 console.log(hashFromString(str));
 // OUTPUT: sAcSRiNpatI8ZY3K_EfpGQMmsBUcoM8KIAuRz24LbZctHCEiG_aVXikN_b2NsNAOkes-65cuYCG2zdi5nl6HRw
 ```
-
-
-## Development
-
-This package is developed with deno 2. The production code is in `src/mod.ts` and its test in
-`src/__tests__/mod.spec.ts`
-
-- `deno fmt src`: format files
-- `deno lint src`: lint files
-- `deno dev`: run tests on each change in mod.ts
-- `deno run test && deno run lcov && deno run html`: run the tests with coverage, then convert to lcov and prepare in
-  `html_cov` an HTML export of the coverage info.
