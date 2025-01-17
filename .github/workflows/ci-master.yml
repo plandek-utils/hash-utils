@@ -12,6 +12,7 @@ jobs:
       packages: write # allow GITHUB_TOKEN to publish packages
       repository-projects: read
       id-token: write
+      issues: write
 
     steps:
       - name: Checkout
