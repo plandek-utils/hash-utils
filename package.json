@@ -51,7 +51,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "sort-keys": "^4.2.0 || ^5.0.0"
+    "sort-keys": "^4.2.0"
   },
   "config": {
     "commitizen": {
