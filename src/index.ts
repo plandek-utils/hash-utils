@@ -1,6 +1,5 @@
+import { createHash } from "node:crypto";
 import sortKeys from "sort-keys";
-import { crypto } from "@std/crypto";
-import { encodeBase64 } from "@std/encoding/base64";
 
 /**
  * JSON.stringify with the object keys deeply sorted
@@ -32,12 +31,7 @@ export function idFromComplex(prefix: string | null, input: Record<string, unkno
  * @returns
  */
 export function hashFromString(str: string): string {
-  const hash = crypto.subtle.digestSync(
-    "SHA-512",
-    new TextEncoder().encode(str),
-  );
-
-  const b64 = encodeBase64(hash);
+  const b64 = createHash("sha512").update(str).digest("base64");
   return b64.replace(REGEX_BASE64_URL, (x) => BASE64_URL_REPLACEMENT_MAP[x]);
 }
 

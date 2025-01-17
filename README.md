@@ -1,11 +1,5 @@
 # @plandek-utils/hash-utils
 
-[![JSR Scope](https://jsr.io/badges/@plandek-utils)](https://jsr.io/@plandek-utils)
-[![JSR](https://jsr.io/badges/@plandek-utils/hash-utils)](https://jsr.io/@plandek-utils/hash-utils)
-[![JSR Score](https://jsr.io/badges/@plandek-utils/hash-utils/score)](https://jsr.io/@plandek-utils/hash-utils)
-[![Maintainability](https://api.codeclimate.com/v1/badges/16ce58188889c348014b/maintainability)](https://codeclimate.com/github/plandek-utils/hash-utils/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/16ce58188889c348014b/test_coverage)](https://codeclimate.com/github/plandek-utils/hash-utils/test_coverage)
-
 TypeScript utils for generating hashes and sorting JSON.
 
 ## Usage

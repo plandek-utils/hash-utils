@@ -1,7 +1,6 @@
-import { describe, it } from "@std/testing/bdd";
-import { expect } from "@std/expect";
+import { describe, expect, it } from "vitest";
 
-import { hashFromString, idFromComplex, sortedJSONFor } from "../mod.ts";
+import { hashFromString, idFromComplex, sortedJSONFor } from "..";
 
 describe("sortedJSONFor", () => {
   it("should sort keys deeply", () => {
@@ -13,14 +12,16 @@ describe("sortedJSONFor", () => {
         e: 3,
       },
     };
-    expect(sortedJSONFor(input)).toBe(JSON.stringify({
-      a: 1,
-      b: 2,
-      c: {
-        d: 4,
-        e: 3,
-      },
-    }));
+    expect(sortedJSONFor(input)).toBe(
+      JSON.stringify({
+        a: 1,
+        b: 2,
+        c: {
+          d: 4,
+          e: 3,
+        },
+      }),
+    );
   });
 });
 

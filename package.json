@@ -1,0 +1,60 @@
+{
+  "name": "@plandek-utils/hash-utils",
+  "version": "0.1.0",
+  "author": "Eduardo Turiño <eturino@plandek.com>",
+  "description": "TypeScript types and predicate `isPlainObject` and `isPlainObjectValue`, which are serializable POJOs.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "commit": "git-cz",
+    "build": "npm run build:tsup && npm run build:dts",
+    "build:tsup": "tsup",
+    "build:dts": "echo 'emitting Declaration using tsc' && tsc --emitDeclarationOnly",
+    "fix": "npm run fix:biome && npm run fix:minify",
+    "fix:biome": "biome check --write src",
+    "fix:minify": "echo 'Minifying fixtures.'; find . -regex './src/.*\\.fixtures\\.json$' -exec ./minify-json-file.sh {} \\;",
+    "check": "npm run check:biome && npm run check:tsc",
+    "check:biome": "biome check src",
+    "check:tsc": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepare-release": "npm run fix && npm run check && npm run test && npm run build",
+    "prepare": "husky || true"
+  },
+  "repository": {
+    "type": "github",
+    "url": "git+https://github.com/plandek-utils/hash-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/plandek-utils/hash-utils/issues"
+  },
+  "homepage": "https://github.com/plandek-utils/hash-utils",
+  "license": "MIT",
+  "keywords": [],
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/cz-commitlint": "^19.6.1",
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-v8": "^3.0.2",
+    "commitizen": "^4.3.1",
+    "husky": "^9.1.7",
+    "inquirer": "^9.3.7",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.2"
+  },
+  "dependencies": {
+    "sort-keys": "^5.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  }
+}
