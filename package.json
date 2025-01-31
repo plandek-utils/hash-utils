@@ -1,6 +1,6 @@
 {
   "name": "@plandek-utils/hash-utils",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Eduardo Turiño <eturino@plandek.com>",
   "description": "TypeScript utils for generating hashes and sorting JSON.",
   "main": "dist/index.js",
