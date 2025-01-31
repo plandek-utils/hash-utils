@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.0.2](https://github.com/plandek-utils/hash-utils/compare/v2.0.1...v2.0.2) (2025-01-31)
+
+
+### Bug Fixes
+
+* adding src to the package ([e0072fb](https://github.com/plandek-utils/hash-utils/commit/e0072fbc3237ec2ac7680a198762fe1b8f284d7a))
+
 ## [2.0.1](https://github.com/plandek-utils/hash-utils/compare/v2.0.0...v2.0.1) (2025-01-17)
 
 
